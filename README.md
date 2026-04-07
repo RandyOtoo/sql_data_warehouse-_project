@@ -17,19 +17,6 @@ The data architecture or pipeline for this project follows the Medallion Archite
 3. **Gold Layer**: Houses business-ready data modeled into a star schema required for reporting and analytics.
 
 ---
-## Data Flow — ETL Process
-
-![Data Flow](docs/data_flow.png)
-
-
----
-## Data Model
-
-The Gold layer follows a **Star Schema** design:
-
-![Data Flow](docs/data_model.png)
-
----
 ## Project Overview
 This project builds a modern data warehouse on SQL Server using the Medallion Architecture. It covers the full pipeline — from raw data ingestion through transformation and modeling, to SQL-based analytics and reporting.
 
@@ -39,6 +26,18 @@ What's included:
 3. **Data Modeling**: Fact and dimension tables structured for efficient analytical queries
 4. **Analytics & Reporting**: SQL reports surfacing insights on customers, products, and sales trends
 
+---
+
+## Tech Stack
+
+| Area | Tools & Technologies |
+|------|----------------------|
+| Database | Microsoft SQL Server |
+| Query Language | T-SQL |
+| Architecture Pattern | Medallion (Bronze / Silver / Gold) |
+| Data Modeling | Star Schema (Fact & Dimension tables) |
+| Source Data | CSV flat files (ERP & CRM systems) |
+| Documentation | ERD diagrams, data dictionary |
 
 ---
 ## Project Requirements 
@@ -54,6 +53,20 @@ Develop a modern data warehouse using SQL Server to consolidate sales data, enab
 - **Integration**: Combine both sources into a single, user-friendly data model designed for analytical queries.
 - **Scope**: focus on the latest dataset only; historization of data is not required.
 - **Documentation**: Provide clear documentation of the data model to support both business stakeholders and the analytics team.
+
+---
+## Data Flow — ETL Process
+
+![Data Flow](docs/data_flow.png)
+
+
+---
+## Data Model
+
+The Gold layer follows a **Star Schema** design:
+
+![Data Flow](docs/data_model.png)
+
 
 ---
 
