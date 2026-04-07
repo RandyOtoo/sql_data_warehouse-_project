@@ -39,13 +39,13 @@ The Gold Layer represents business-ready data designed for analytics and reporti
 | product_key          | INT          | Surrogate key uniquely identifying each product record. |
 | product_id           | INT          | Unique identifier for internal tracking of products. |
 | product_number       | NVARCHAR(50) | Alphanumeric product code used for identification. |
-| product_name         | NVARCHAR(50) | Descriptive name of the product. |
 | category_id          | NVARCHAR(50) | Identifier for the product category. |
+| product_name         | NVARCHAR(50) | Descriptive name of the product. |
+| product_line         | NVARCHAR(50) | Product line or series (e.g., Road, Mountain). |
 | category             | NVARCHAR(50) | High-level product classification (e.g., Clothing, Components). |
 | subcategory          | NVARCHAR(50) | More detailed classification within a category. |
-| maintenance_required | NVARCHAR(50) | Indicates if maintenance is required (e.g., 'Yes', 'No'). |
+| maintenance          | NVARCHAR(50) | Indicates if maintenance is required (e.g., 'Yes', 'No'). |
 | cost                 | INT          | Base cost of the product in monetary units. |
-| product_line         | NVARCHAR(50) | Product line or series (e.g., Road, Mountain). |
 | start_date           | DATE         | Date the product became available. |
 
 ---
@@ -60,14 +60,14 @@ The Gold Layer represents business-ready data designed for analytics and reporti
 | Column Name   | Data Type     | Description |
 |---------------|--------------|-------------|
 | order_number  | NVARCHAR(50) | Unique identifier for each sales order (e.g., 'SO43699'). |
-| product_key   | INT          | Foreign key linking to the product dimension. |
-| customer_key  | INT          | Foreign key linking to the customer dimension. |
+| product_key   | INT          | Surrogate key linking the order to the product dimension table. |
+| customer_key  | INT          | Surrogate key linking the order to the customer dimension table. |
 | order_date    | DATE         | Date the order was placed. |
-| shipping_date | DATE         | Date the order was shipped. |
+| shipping_date | DATE         | Date the order was shipped to the customer. |
 | due_date      | DATE         | Payment due date for the order. |
-| sales_amount  | INT          | Total value of the sale for the line item. |
-| quantity      | INT          | Number of units ordered. |
-| price         | INT          | Price per unit for the product. |
+| sales_amount  | INT          | Total monetary value of the sale for the line item, in whole currency units(e.g, 3578). |
+| quantity      | INT          | Number of units ordered(e.g, 1). |
+| price         | INT          | Price per unit for the product, in whole currency units(e.g, 699). |
 
 ---
 
