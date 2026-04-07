@@ -1,12 +1,19 @@
 # Data Warehouse and Analytics Project
 
-## Building a modern data warehouse with SQL Server, including ETL processes, data modeling, and analytics.
-
+### Building a modern data warehouse with SQL Server, including ETL processes, data modeling, and analytics.
 
 Welcome to the **Data Warehouse and Analytics Project** repository!
 This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. 
 
 ---
+
+> A modern SQL Server data warehouse consolidating ERP & CRM sales data into a clean analytical layer for business reporting and decision-making.
+
+![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=flat&logo=microsoftsqlserver&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Complete-4CAF50?style=flat)
+![License](https://img.shields.io/badge/License-MIT-gray?style=flat)
+
+
 ##  Data Architecture
 
 The data architecture or pipeline for this project follows the Medallion Architecture with three progressive layers **Bronze**, **Silver**, and **Gold** layers:
