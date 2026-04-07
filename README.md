@@ -82,30 +82,35 @@ These insights empower stakeholders with key business metrics, enabling strategi
 
 ---
 ## Repository Structure
+```
 data-warehouse-project/
 │
 ├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
 │
 ├── docs/                               # Project documentation and architecture details
-│   ├── etl.drawio                      # Draw.io file shows all different techniquies and methods of ETL
-│   ├── data_architecture.drawio        # Draw.io file shows the project's architecture
-│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
-│   ├── data_flow.drawio                # Draw.io file for the data flow diagram
-│   ├── data_models.drawio              # Draw.io file for data models (star schema)
-│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
+│   ├── Data_Architecture.drawio        # Overall project architecture diagram
+│   ├── data_architecture.png           # Architecture diagram export
+│   ├── data_Integration Model.drawio   # Data integration model diagram
+│   ├── data_integration.png            # Data integration diagram export
+│   ├── data_layers.drawio              # Data layers diagram
+│   ├── data_model.drawio               # Star schema and data model diagram
+│   ├── data_model.png                  # Data model diagram export
+│   ├── data_flow.png                   # Data flow diagram export
+│   ├── ETL Methods.png                 # ETL techniques and methods visual
+│   ├── data_catalog.md                 # Dataset catalog with field descriptions and metadata
+│   └── naming_conventions.md           # Naming guidelines for tables, columns, and files
 │
 ├── scripts/                            # SQL scripts for ETL and transformations
 │   ├── bronze/                         # Scripts for extracting and loading raw data
 │   ├── silver/                         # Scripts for cleaning and transforming data
-│   ├── gold/                           # Scripts for creating analytical models
+│   └── gold/                           # Scripts for creating analytical models
 │
-├── tests/                              # Test scripts and quality files
+├── tests/                              # Test scripts and data quality checks
 │
 ├── README.md                           # Project overview and instructions
-├── LICENSE                             # License information for the repository
-├── .gitignore                          # Files and directories to be ignored by Git
-└── requirements.txt                    # Dependencies and requirements for the project
-
+├── LICENSE                             # License information
+└── .gitignore                          # Files and directories ignored by Git
+```
 ## License
 This project is licensed under the [MIT License](LICENSE). 
 
