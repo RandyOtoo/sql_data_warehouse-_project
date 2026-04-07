@@ -1,1 +1,49 @@
+# =========================
+# System Files
+# =========================
+.DS_Store
+Thumbs.db
 
+# =========================
+# Environment / Config
+# =========================
+*.env
+.env.*
+
+# =========================
+# SQL Server Files
+# =========================
+*.mdf
+*.ldf
+*.ndf
+
+# =========================
+# Python / Data Science
+# =========================
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+venv/
+
+# ===========================
+# Logs / Temp or backup files
+# ===========================
+*.log
+*.bak
+*.tmp
+*.swp
+
+# =========================
+# IDE-specific files
+# =========================
+.vscode/
+.idea/
+
+# =============================
+# Data & Outputs(if applicable)
+# =============================
+datasets/      
+*.png
+*.pdf
+*.zip
+*.parquet
