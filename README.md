@@ -17,6 +17,19 @@ The data architecture or pipeline for this project follows the Medallion Archite
 3. **Gold Layer**: Houses business-ready data modeled into a star schema required for reporting and analytics.
 
 ---
+## Data Flow — ETL Process
+
+![Data Flow](docs/data_flow.png)
+
+
+---
+## Data Model
+
+The Gold layer follows a **Star Schema** design:
+
+![Data Flow](docs/data_model.png)
+
+---
 ## Project Overview
 This project builds a modern data warehouse on SQL Server using the Medallion Architecture. It covers the full pipeline — from raw data ingestion through transformation and modeling, to SQL-based analytics and reporting.
 
