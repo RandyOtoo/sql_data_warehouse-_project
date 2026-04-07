@@ -24,8 +24,6 @@ What's included:
 1. **Data Architecture**: Bronze, Silver, and Gold layers following Medallion design principles
 2. **ETL Pipelines**: Extract, transform, and load workflows from ERP and CRM source systems
 3. **Data Modeling**: Fact and dimension tables structured for efficient analytical queries
-4. **Analytics & Reporting**: SQL reports surfacing insights on customers, products, and sales trends
-
 ---
 
 ## Tech Stack
@@ -37,7 +35,6 @@ What's included:
 | Architecture Pattern | Medallion (Bronze / Silver / Gold) |
 | Data Modeling | Star Schema (Fact & Dimension tables) |
 | Source Data | CSV flat files (ERP & CRM systems) |
-
 
 ---
 ## Project Requirements 
@@ -55,19 +52,36 @@ Develop a modern data warehouse using SQL Server to consolidate sales data, enab
 - **Documentation**: Provide clear documentation of the data model to support both business stakeholders and the analytics team.
 
 ---
-## Data Flow — ETL Process
+## Data Flow
 
 ![Data Flow](docs/data_flow.png)
 
+### 🥉 Bronze — Raw Ingestion
+- ERP and CRM CSV files loaded directly into staging tables
+- Data preserved exactly as received — serves as the audit baseline
+
+### 🥈 Silver — Cleansing & Transformation
+- Nulls handled, duplicates removed, data types standardized
+- ERP and CRM records integrated via shared customer and product keys
+- Business rules applied to resolve inconsistencies across sources
+
+### 🥇 Gold — Analytical Layer
+- Cleansed data modeled into a star schema (fact + dimension tables)
+- Views created for common reporting queries
+- Ready for direct BI tool connection or SQL-based analysis
 
 ---
 ## Data Model
 
-The Gold layer follows a **Star Schema** design:
+The Gold layer follows a **Star Schema** design optimized for analytical queries:
 
 ![Data Flow](docs/data_model.png)
 
+**Fact Table:** `fact_sales` — captures transactional sales events
 
+**Dimension Tables:**
+- `dim_customer` — customer details, segments, and regions
+- `dim_product` — product names, categories, and cost
 ---
 
 ### BI: Analytics & Reporting (Data Analytics)
@@ -112,7 +126,7 @@ data-warehouse-project/
 └── .gitignore                          # Files and directories ignored by Git
 ```
 ## License
-This project is licensed under the [MIT License](LICENSE). 
+This project is licensed under the [MIT License](LICENSE).
 
 
 
